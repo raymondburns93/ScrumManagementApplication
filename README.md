@@ -9,3 +9,5 @@ I predominantly worked server side and first introduced the layered architecture
 For specific code contributions, please see
 
 ScrumManagementApplication/trunk/ScrumManagementApp/ScrumManagementApp.DAL/Repository/GenericRepository.cs
+ScrumManagementApplication/trunk/ScrumManagementApp/ScrumManagementApp.Business/ProductBacklogLogic.cs
+[business layer example](trunk/ScrumManagementApp/ScrumManagementApp.Business/ProductBacklogLogic.cs)
