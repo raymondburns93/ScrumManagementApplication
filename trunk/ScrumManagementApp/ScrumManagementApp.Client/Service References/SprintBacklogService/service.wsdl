@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SprintBacklogService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ScrumManagementApp.Common.DTOs" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISprintBacklogService_GetSprintBacklogById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSprintBacklogById" />
+  </wsdl:message>
+  <wsdl:message name="ISprintBacklogService_GetSprintBacklogById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSprintBacklogByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISprintBacklogService_AddUserStoryToSprintBacklog_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserStoryToSprintBacklog" />
+  </wsdl:message>
+  <wsdl:message name="ISprintBacklogService_AddUserStoryToSprintBacklog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserStoryToSprintBacklogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISprintBacklogService_GetSprintBacklogUserStories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSprintBacklogUserStories" />
+  </wsdl:message>
+  <wsdl:message name="ISprintBacklogService_GetSprintBacklogUserStories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSprintBacklogUserStoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISprintBacklogService_EditUserStory_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditUserStory" />
+  </wsdl:message>
+  <wsdl:message name="ISprintBacklogService_EditUserStory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditUserStoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISprintBacklogService_DeleteUserStory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserStory" />
+  </wsdl:message>
+  <wsdl:message name="ISprintBacklogService_DeleteUserStory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserStoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISprintBacklogService_ReprioritiseUserStory_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReprioritiseUserStory" />
+  </wsdl:message>
+  <wsdl:message name="ISprintBacklogService_ReprioritiseUserStory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReprioritiseUserStoryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISprintBacklogService">
+    <wsdl:operation name="GetSprintBacklogById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISprintBacklogService/GetSprintBacklogById" message="tns:ISprintBacklogService_GetSprintBacklogById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISprintBacklogService/GetSprintBacklogByIdResponse" message="tns:ISprintBacklogService_GetSprintBacklogById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserStoryToSprintBacklog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISprintBacklogService/AddUserStoryToSprintBacklog" message="tns:ISprintBacklogService_AddUserStoryToSprintBacklog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISprintBacklogService/AddUserStoryToSprintBacklogResponse" message="tns:ISprintBacklogService_AddUserStoryToSprintBacklog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSprintBacklogUserStories">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISprintBacklogService/GetSprintBacklogUserStories" message="tns:ISprintBacklogService_GetSprintBacklogUserStories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISprintBacklogService/GetSprintBacklogUserStoriesResponse" message="tns:ISprintBacklogService_GetSprintBacklogUserStories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditUserStory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISprintBacklogService/EditUserStory" message="tns:ISprintBacklogService_EditUserStory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISprintBacklogService/EditUserStoryResponse" message="tns:ISprintBacklogService_EditUserStory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserStory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISprintBacklogService/DeleteUserStory" message="tns:ISprintBacklogService_DeleteUserStory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISprintBacklogService/DeleteUserStoryResponse" message="tns:ISprintBacklogService_DeleteUserStory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReprioritiseUserStory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISprintBacklogService/ReprioritiseUserStory" message="tns:ISprintBacklogService_ReprioritiseUserStory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISprintBacklogService/ReprioritiseUserStoryResponse" message="tns:ISprintBacklogService_ReprioritiseUserStory_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISprintBacklogService" type="tns:ISprintBacklogService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSprintBacklogById">
+      <soap:operation soapAction="http://tempuri.org/ISprintBacklogService/GetSprintBacklogById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserStoryToSprintBacklog">
+      <soap:operation soapAction="http://tempuri.org/ISprintBacklogService/AddUserStoryToSprintBacklog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSprintBacklogUserStories">
+      <soap:operation soapAction="http://tempuri.org/ISprintBacklogService/GetSprintBacklogUserStories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditUserStory">
+      <soap:operation soapAction="http://tempuri.org/ISprintBacklogService/EditUserStory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserStory">
+      <soap:operation soapAction="http://tempuri.org/ISprintBacklogService/DeleteUserStory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReprioritiseUserStory">
+      <soap:operation soapAction="http://tempuri.org/ISprintBacklogService/ReprioritiseUserStory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SprintBacklogService">
+    <wsdl:port name="BasicHttpBinding_ISprintBacklogService" binding="tns:BasicHttpBinding_ISprintBacklogService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/SprintBacklogService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

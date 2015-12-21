@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d781ab22-ebdb-4b0b-b711-7c0004fe8a83" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/TaskService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="162596d7-f74c-4064-89f1-0cb593994c14" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/TaskService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3cb9329f-4003-4eba-a27f-aa28766e969b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/TaskService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3f5aebe5-a2f3-4192-b066-91d30b6ef54f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/TaskService/mex" />
+    <MetadataFile FileName="ScrumManagementApp.Common.DTOs.xsd" MetadataType="Schema" ID="eae05346-9122-4327-86fa-8939c80628ed" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/TaskService/mex" />
+    <MetadataFile FileName="System.Threading.Tasks.xsd" MetadataType="Schema" ID="aaa99528-1e5f-4c45-826b-ce8eb2e5fbb5" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/TaskService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

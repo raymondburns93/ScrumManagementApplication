@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="ScrumManagementApp.Client.Views.HomeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:ViewModels="clr-namespace:ScrumManagementApp.Client.ViewModels"
+        xmlns:Views="clr-namespace:ScrumManagementApp.Client.Views"
+        BorderBrush="{DynamicResource AccentColorBrush}"
+        BorderThickness="1"
+        xmlns:local="clr-namespace:ScrumManagementApp.Client.Views"
+        mc:Ignorable="d">
+
+    <DockPanel Width="800" Height="600" Background="DodgerBlue">
+        <Border BorderBrush="Black" Background="Black" BorderThickness="3" DockPanel.Dock="Left" Margin="3">
+            <StackPanel DockPanel.Dock="Left" Background="White" Margin="0,-3,0,3" >
+                <Image Source="/Common/Icons/icon-what-is-scrum.png"  Margin="5"  MaxHeight="75" MaxWidth ="75" />
+                <Separator Height="20" Margin="0" Background="Black" />
+                <Button Style="{StaticResource AccentedSquareButtonStyle}" Command="{Binding HomeButtonCommand}" Content="Home" Margin="4" FontSize="16"/>
+                <Button Style="{StaticResource AccentedSquareButtonStyle}" Command="{Binding LogOutButtonCommand}" Content="Log Out" Margin="4" FontSize="16"/>
+                <Separator Height="20" Margin="0" Background="Black" />
+                <Button Style="{StaticResource AccentedSquareButtonStyle}" Command="{Binding CreateProjectButtonCommand}" Content="Create Project" Margin="4" FontSize="16"/>
+                <Separator Height="20" Margin="0" Background="Black" />
+            </StackPanel>
+        </Border>
+        <Border BorderBrush="Black" Background="Black" BorderThickness="3" DockPanel.Dock="Left" Margin="3">
+            <StackPanel Background="White" >
+                <ContentControl DockPanel.Dock="Right" Content="{Binding CurrentNestedPageViewModel}"/>
+            </StackPanel>
+        </Border>
+    </DockPanel>
+
+</UserControl>

@@ -1,0 +1,75 @@
+﻿<Application x:Class="ScrumManagementApp.Client.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ViewModels="clr-namespace:ScrumManagementApp.Client.ViewModels"
+             xmlns:Views="clr-namespace:ScrumManagementApp.Client.Views">
+    <!--StartupUri="Views/LoginView.xaml">-->
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!-- Styling -->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Views & relating ViewModels -->
+            <DataTemplate DataType="{x:Type ViewModels:LoginViewModel}">
+                <Views:LoginView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:RegisterViewModel}">
+                <Views:RegisterView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:HomeViewModel}">
+                <Views:HomeView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:WelcomeViewViewModel}">
+                <Views:WelcomeView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:CreateProjectViewModel}">
+                <Views:CreateProjectView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:SelectProductOwnerViewModel}">
+                <Views:SelectProductOwnerView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:SelectScrumMasterViewModel}">
+                <Views:SelectScrumMastersView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:ProductBacklogViewModel}">
+                <Views:ProductBacklogView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:SprintManagementViewModel}">
+                <Views:SprintManagementView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:ProjectSummaryViewModel}">
+                <Views:ProjectSummaryView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:ProductBacklogViewerViewModel}">
+                <Views:ProductBacklogViewerView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:SprintBacklogViewerViewModel}">
+                <Views:SprintBacklogViewerView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:SprintBacklogViewModel}">
+                <Views:SprintBacklogView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:SprintSummaryViewModel}">
+                <Views:SprintSummaryView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:CreateSprintViewModel}">
+                <Views:CreateSprintView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:CreateUserStoryTaskViewModel}">
+                <Views:CreateUserStoryTaskView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:SprintTaskViewsViewModel}">
+                <Views:SprintTasksView />
+            </DataTemplate>
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

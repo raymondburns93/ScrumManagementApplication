@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProductBacklogService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ScrumManagementApp.Common.DTOs" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProductBacklogService_GetProductBacklogByProjectId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductBacklogByProjectId" />
+  </wsdl:message>
+  <wsdl:message name="IProductBacklogService_GetProductBacklogByProjectId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductBacklogByProjectIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductBacklogService_AddUserStoryToProjectBacklog_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserStoryToProjectBacklog" />
+  </wsdl:message>
+  <wsdl:message name="IProductBacklogService_AddUserStoryToProjectBacklog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserStoryToProjectBacklogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductBacklogService_GetProductBacklogUserStories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductBacklogUserStories" />
+  </wsdl:message>
+  <wsdl:message name="IProductBacklogService_GetProductBacklogUserStories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductBacklogUserStoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductBacklogService_EditUserStory_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditUserStory" />
+  </wsdl:message>
+  <wsdl:message name="IProductBacklogService_EditUserStory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditUserStoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductBacklogService_DeleteUserStory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserStory" />
+  </wsdl:message>
+  <wsdl:message name="IProductBacklogService_DeleteUserStory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserStoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductBacklogService_ReprioritiseUserStory_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReprioritiseUserStory" />
+  </wsdl:message>
+  <wsdl:message name="IProductBacklogService_ReprioritiseUserStory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReprioritiseUserStoryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IProductBacklogService">
+    <wsdl:operation name="GetProductBacklogByProjectId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductBacklogService/GetProductBacklogByProjectId" message="tns:IProductBacklogService_GetProductBacklogByProjectId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductBacklogService/GetProductBacklogByProjectIdResponse" message="tns:IProductBacklogService_GetProductBacklogByProjectId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserStoryToProjectBacklog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductBacklogService/AddUserStoryToProjectBacklog" message="tns:IProductBacklogService_AddUserStoryToProjectBacklog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductBacklogService/AddUserStoryToProjectBacklogResponse" message="tns:IProductBacklogService_AddUserStoryToProjectBacklog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductBacklogUserStories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductBacklogService/GetProductBacklogUserStories" message="tns:IProductBacklogService_GetProductBacklogUserStories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductBacklogService/GetProductBacklogUserStoriesResponse" message="tns:IProductBacklogService_GetProductBacklogUserStories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditUserStory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductBacklogService/EditUserStory" message="tns:IProductBacklogService_EditUserStory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductBacklogService/EditUserStoryResponse" message="tns:IProductBacklogService_EditUserStory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserStory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductBacklogService/DeleteUserStory" message="tns:IProductBacklogService_DeleteUserStory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductBacklogService/DeleteUserStoryResponse" message="tns:IProductBacklogService_DeleteUserStory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReprioritiseUserStory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductBacklogService/ReprioritiseUserStory" message="tns:IProductBacklogService_ReprioritiseUserStory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductBacklogService/ReprioritiseUserStoryResponse" message="tns:IProductBacklogService_ReprioritiseUserStory_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IProductBacklogService" type="tns:IProductBacklogService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProductBacklogByProjectId">
+      <soap:operation soapAction="http://tempuri.org/IProductBacklogService/GetProductBacklogByProjectId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserStoryToProjectBacklog">
+      <soap:operation soapAction="http://tempuri.org/IProductBacklogService/AddUserStoryToProjectBacklog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductBacklogUserStories">
+      <soap:operation soapAction="http://tempuri.org/IProductBacklogService/GetProductBacklogUserStories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditUserStory">
+      <soap:operation soapAction="http://tempuri.org/IProductBacklogService/EditUserStory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserStory">
+      <soap:operation soapAction="http://tempuri.org/IProductBacklogService/DeleteUserStory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReprioritiseUserStory">
+      <soap:operation soapAction="http://tempuri.org/IProductBacklogService/ReprioritiseUserStory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductBacklogService">
+    <wsdl:port name="BasicHttpBinding_IProductBacklogService" binding="tns:BasicHttpBinding_IProductBacklogService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService/ProductBacklogService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

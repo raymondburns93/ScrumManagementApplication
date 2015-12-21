@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrumManagementApp.Client", "ScrumManagementApp.Client\ScrumManagementApp.Client.csproj", "{CEC1F38E-0020-4ABF-A310-68383A7B583B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{283CD20C-ED7D-45B4-BB29-6CB75E9BC25E} = {283CD20C-ED7D-45B4-BB29-6CB75E9BC25E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrumManagementApp.DAL", "ScrumManagementApp.DAL\ScrumManagementApp.DAL.csproj", "{DA840C1C-6C0E-4238-B51C-47223061CBF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrumManagementApp.WebService", "ScrumManagementApp.WebService\ScrumManagementApp.WebService.csproj", "{283CD20C-ED7D-45B4-BB29-6CB75E9BC25E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrumManagementApp.Host", "ScrumManagementApp.Host\ScrumManagementApp.Host.csproj", "{E8561F64-68C1-430A-936C-17940E88B5CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrumManagementApp.Testing", "ScrumManagmentApp.Testing\ScrumManagementApp.Testing.csproj", "{200D6E27-4F5F-479D-B411-1EFBC0CBB512}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrumManagementApp.Business", "ScrumManagementApp.Business\ScrumManagementApp.Business.csproj", "{C0D6F4D3-6691-495F-976A-BA072D5BBCEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrumManagementApp.EntityModels", "ScrumManagementApp.EntityModels\ScrumManagementApp.EntityModels.csproj", "{9E2C7439-9475-4A80-AE61-0264C24FA11E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrumManagementApp.Common", "ScrumManagementApp.Common\ScrumManagementApp.Common.csproj", "{457AAD44-81AC-4B0A-8416-7E77EE8DEF94}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEC1F38E-0020-4ABF-A310-68383A7B583B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC1F38E-0020-4ABF-A310-68383A7B583B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC1F38E-0020-4ABF-A310-68383A7B583B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC1F38E-0020-4ABF-A310-68383A7B583B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA840C1C-6C0E-4238-B51C-47223061CBF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA840C1C-6C0E-4238-B51C-47223061CBF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA840C1C-6C0E-4238-B51C-47223061CBF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA840C1C-6C0E-4238-B51C-47223061CBF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{283CD20C-ED7D-45B4-BB29-6CB75E9BC25E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{283CD20C-ED7D-45B4-BB29-6CB75E9BC25E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{283CD20C-ED7D-45B4-BB29-6CB75E9BC25E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{283CD20C-ED7D-45B4-BB29-6CB75E9BC25E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8561F64-68C1-430A-936C-17940E88B5CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8561F64-68C1-430A-936C-17940E88B5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8561F64-68C1-430A-936C-17940E88B5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8561F64-68C1-430A-936C-17940E88B5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{200D6E27-4F5F-479D-B411-1EFBC0CBB512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{200D6E27-4F5F-479D-B411-1EFBC0CBB512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{200D6E27-4F5F-479D-B411-1EFBC0CBB512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{200D6E27-4F5F-479D-B411-1EFBC0CBB512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D6F4D3-6691-495F-976A-BA072D5BBCEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D6F4D3-6691-495F-976A-BA072D5BBCEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D6F4D3-6691-495F-976A-BA072D5BBCEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D6F4D3-6691-495F-976A-BA072D5BBCEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E2C7439-9475-4A80-AE61-0264C24FA11E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E2C7439-9475-4A80-AE61-0264C24FA11E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E2C7439-9475-4A80-AE61-0264C24FA11E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E2C7439-9475-4A80-AE61-0264C24FA11E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{457AAD44-81AC-4B0A-8416-7E77EE8DEF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{457AAD44-81AC-4B0A-8416-7E77EE8DEF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{457AAD44-81AC-4B0A-8416-7E77EE8DEF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{457AAD44-81AC-4B0A-8416-7E77EE8DEF94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="efb3a149-4402-4262-b845-e94a699eb3f8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/SprintBacklogService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="100becf2-7a9a-41bd-965c-6f4db1599b49" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/SprintBacklogService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="661b4de4-27d3-4879-9529-a4f33094a9d6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/SprintBacklogService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="17393821-9cf5-47a4-97a2-b47271bdd9ef" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/SprintBacklogService/mex" />
+    <MetadataFile FileName="ScrumManagementApp.Common.DTOs.xsd" MetadataType="Schema" ID="23b0d658-f989-4d02-ad07-db4694c4403b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/SprintBacklogService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

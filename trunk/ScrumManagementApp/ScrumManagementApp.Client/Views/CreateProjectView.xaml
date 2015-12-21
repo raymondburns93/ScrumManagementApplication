@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="ScrumManagementApp.Client.Views.CreateProjectView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:ScrumManagementApp.Client.Views"
+        mc:Ignorable="d"
+        xmlns:ViewModels="clr-namespace:ScrumManagementApp.Client.ViewModels"
+        FocusManager.FocusedElement="{Binding ElementName=txtProjectName}"
+        BorderBrush="{DynamicResource AccentColorBrush}"
+        BorderThickness="1"
+        Name="ucCreateProject">
+
+    <Grid Background="Transparent" >
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Name="pnlMainPanel">
+
+            <StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Content="Create New Project" VerticalAlignment="Center" FontWeight="Bold" FontSize="20" Foreground="DodgerBlue" BorderThickness="0" ClipToBounds="True"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Content="Project Name:" Width="200" VerticalAlignment="Center" FontWeight="Bold" FontSize="18"/>
+                <TextBox TextWrapping="NoWrap" AcceptsReturn="True" FontSize="16" Text="{Binding ProjectName, UpdateSourceTrigger=PropertyChanged}" x:Name="txtProjectName" Width="250" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Content="Project Description:" Width="200" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+                <TextBox TextWrapping="Wrap" FontSize="16" Height="100" Text="{Binding ProjectDescription, UpdateSourceTrigger=PropertyChanged}" x:Name="txtProjectDescription" Width="250" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Content="Project Start Date:" Width="200" VerticalAlignment="Center" FontWeight="Bold" FontSize="18"/>
+                <DatePicker SelectedDateFormat="Long" Name="StartDate" SelectedDate="{Binding StartDateString, UpdateSourceTrigger=PropertyChanged}"
+                  DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday" Width="250" />
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Content="Project End Date:" Width="200" VerticalAlignment="Center" FontWeight="Bold" FontSize="18"/>
+                <DatePicker SelectedDateFormat="Long" Name="EndDate" SelectedDate="{Binding EndDateString, UpdateSourceTrigger=PropertyChanged}"
+                  DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday" Width="250" />
+
+            </StackPanel>
+
+            <TextBlock x:Name="lblErrorMessage" Foreground="Crimson" TextWrapping="NoWrap"
+                           Text="{Binding ErrorMessage}" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Italic"/>
+
+            <StackPanel Orientation="Vertical" Margin="5" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button Style="{StaticResource AccentedSquareButtonStyle}" Content="Save" Width="75" x:Name="SaveButton" Margin="5" FontWeight="Bold" Command="{Binding SaveCommand}" FontSize="16"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

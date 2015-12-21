@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ScrumManagementApp.Common.DTOs" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserService_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUserByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUserByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UsernameExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:UsernameExists" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UsernameExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UsernameExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_ValidateLoginDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateLoginDetails" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_ValidateLoginDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateLoginDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUsersByProjectId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByProjectId" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUsersByProjectId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByProjectIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_FindUsersBySkillset_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersBySkillset" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_FindUsersBySkillset_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersBySkillsetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserService">
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/CreateUser" message="tns:IUserService_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/CreateUserResponse" message="tns:IUserService_CreateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetAllUsers" message="tns:IUserService_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetAllUsersResponse" message="tns:IUserService_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetUser" message="tns:IUserService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetUserResponse" message="tns:IUserService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetUserByEmail" message="tns:IUserService_GetUserByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetUserByEmailResponse" message="tns:IUserService_GetUserByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UsernameExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UsernameExists" message="tns:IUserService_UsernameExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UsernameExistsResponse" message="tns:IUserService_UsernameExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLoginDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/ValidateLoginDetails" message="tns:IUserService_ValidateLoginDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/ValidateLoginDetailsResponse" message="tns:IUserService_ValidateLoginDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByProjectId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetUsersByProjectId" message="tns:IUserService_GetUsersByProjectId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetUsersByProjectIdResponse" message="tns:IUserService_GetUsersByProjectId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersBySkillset">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/FindUsersBySkillset" message="tns:IUserService_FindUsersBySkillset_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/FindUsersBySkillsetResponse" message="tns:IUserService_FindUsersBySkillset_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserService" type="tns:IUserService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://tempuri.org/IUserService/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByEmail">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetUserByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsernameExists">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UsernameExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLoginDetails">
+      <soap:operation soapAction="http://tempuri.org/IUserService/ValidateLoginDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByProjectId">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetUsersByProjectId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersBySkillset">
+      <soap:operation soapAction="http://tempuri.org/IUserService/FindUsersBySkillset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserService">
+    <wsdl:port name="BasicHttpBinding_IUserService" binding="tns:BasicHttpBinding_IUserService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/UserService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

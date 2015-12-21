@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="793050ef-ec53-4db2-8719-eda42fd1923c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService/ProjectService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="62ec7ae8-ad9a-483a-a519-5ef45f7ec66b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService/ProjectService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="cee9ac27-773f-4134-a57e-870dbd10c654" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService/ProjectService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="c76ebc77-8e15-465c-865a-373c9171f096" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService/ProjectService/mex" />
+    <MetadataFile FileName="ScrumManagementApp.Common.DTOs.xsd" MetadataType="Schema" ID="c7e843a5-3c2b-41b5-915e-ae866b94f2f7" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService/ProjectService/mex" />
+    <MetadataFile FileName="Arrays1.xsd" MetadataType="Schema" ID="baebc749-a302-4b82-9a36-4997c92e7152" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService/ProjectService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

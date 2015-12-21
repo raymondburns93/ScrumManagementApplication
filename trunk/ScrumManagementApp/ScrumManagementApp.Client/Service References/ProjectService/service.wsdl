@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProjectService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ScrumManagementApp.Common.DTOs" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProjectService_CreateProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProject" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_CreateProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetAllProjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProjects" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetAllProjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetProjectsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjectsForUser" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetProjectsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjectsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetProjectManagerForProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjectManagerForProject" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetProjectManagerForProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjectManagerForProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetProductOwnerForProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductOwnerForProject" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetProductOwnerForProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductOwnerForProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetScrumMastersForProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScrumMastersForProject" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetScrumMastersForProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScrumMastersForProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetProjectById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjectById" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetProjectById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjectByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetProjectByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjectByName" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_GetProjectByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjectByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_HasConflictingProjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:HasConflictingProjects" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_HasConflictingProjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HasConflictingProjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_UpdateProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProject" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_UpdateProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_AssignProductOwnerToProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignProductOwnerToProject" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_AssignProductOwnerToProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignProductOwnerToProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_AssignsScrumMastersToProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignsScrumMastersToProject" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_AssignsScrumMastersToProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignsScrumMastersToProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_IsProjectManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsProjectManager" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_IsProjectManager_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsProjectManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_IsProductOwner_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsProductOwner" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_IsProductOwner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsProductOwnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_IsScrumMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsScrumMaster" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_IsScrumMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsScrumMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_IsDeveloper_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsDeveloper" />
+  </wsdl:message>
+  <wsdl:message name="IProjectService_IsDeveloper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsDeveloperResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IProjectService">
+    <wsdl:operation name="CreateProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/CreateProject" message="tns:IProjectService_CreateProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/CreateProjectResponse" message="tns:IProjectService_CreateProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProjects">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/GetAllProjects" message="tns:IProjectService_GetAllProjects_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/GetAllProjectsResponse" message="tns:IProjectService_GetAllProjects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/GetProjectsForUser" message="tns:IProjectService_GetProjectsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/GetProjectsForUserResponse" message="tns:IProjectService_GetProjectsForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectManagerForProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/GetProjectManagerForProject" message="tns:IProjectService_GetProjectManagerForProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/GetProjectManagerForProjectResponse" message="tns:IProjectService_GetProjectManagerForProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductOwnerForProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/GetProductOwnerForProject" message="tns:IProjectService_GetProductOwnerForProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/GetProductOwnerForProjectResponse" message="tns:IProjectService_GetProductOwnerForProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScrumMastersForProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/GetScrumMastersForProject" message="tns:IProjectService_GetScrumMastersForProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/GetScrumMastersForProjectResponse" message="tns:IProjectService_GetScrumMastersForProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/GetProjectById" message="tns:IProjectService_GetProjectById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/GetProjectByIdResponse" message="tns:IProjectService_GetProjectById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/GetProjectByName" message="tns:IProjectService_GetProjectByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/GetProjectByNameResponse" message="tns:IProjectService_GetProjectByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HasConflictingProjects">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/HasConflictingProjects" message="tns:IProjectService_HasConflictingProjects_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/HasConflictingProjectsResponse" message="tns:IProjectService_HasConflictingProjects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/UpdateProject" message="tns:IProjectService_UpdateProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/UpdateProjectResponse" message="tns:IProjectService_UpdateProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignProductOwnerToProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/AssignProductOwnerToProject" message="tns:IProjectService_AssignProductOwnerToProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/AssignProductOwnerToProjectResponse" message="tns:IProjectService_AssignProductOwnerToProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignsScrumMastersToProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/AssignsScrumMastersToProject" message="tns:IProjectService_AssignsScrumMastersToProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/AssignsScrumMastersToProjectResponse" message="tns:IProjectService_AssignsScrumMastersToProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsProjectManager">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/IsProjectManager" message="tns:IProjectService_IsProjectManager_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/IsProjectManagerResponse" message="tns:IProjectService_IsProjectManager_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsProductOwner">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/IsProductOwner" message="tns:IProjectService_IsProductOwner_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/IsProductOwnerResponse" message="tns:IProjectService_IsProductOwner_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsScrumMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/IsScrumMaster" message="tns:IProjectService_IsScrumMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/IsScrumMasterResponse" message="tns:IProjectService_IsScrumMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsDeveloper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProjectService/IsDeveloper" message="tns:IProjectService_IsDeveloper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProjectService/IsDeveloperResponse" message="tns:IProjectService_IsDeveloper_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IProjectService" type="tns:IProjectService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateProject">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/CreateProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProjects">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/GetAllProjects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectsForUser">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/GetProjectsForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectManagerForProject">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/GetProjectManagerForProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductOwnerForProject">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/GetProductOwnerForProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScrumMastersForProject">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/GetScrumMastersForProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectById">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/GetProjectById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectByName">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/GetProjectByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasConflictingProjects">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/HasConflictingProjects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProject">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/UpdateProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignProductOwnerToProject">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/AssignProductOwnerToProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignsScrumMastersToProject">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/AssignsScrumMastersToProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsProjectManager">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/IsProjectManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsProductOwner">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/IsProductOwner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsScrumMaster">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/IsScrumMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsDeveloper">
+      <soap:operation soapAction="http://tempuri.org/IProjectService/IsDeveloper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProjectService">
+    <wsdl:port name="BasicHttpBinding_IProjectService" binding="tns:BasicHttpBinding_IProjectService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService/ProjectService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

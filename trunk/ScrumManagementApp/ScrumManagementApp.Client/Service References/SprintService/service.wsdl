@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SprintService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ScrumManagementApp.Common.DTOs" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISprintService_CreateSprint_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSprint" />
+  </wsdl:message>
+  <wsdl:message name="ISprintService_CreateSprint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSprintResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISprintService_GetSprintsForProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSprintsForProject" />
+  </wsdl:message>
+  <wsdl:message name="ISprintService_GetSprintsForProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSprintsForProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISprintService_AssignDeveloperToSprint_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignDeveloperToSprint" />
+  </wsdl:message>
+  <wsdl:message name="ISprintService_AssignDeveloperToSprint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignDeveloperToSprintResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISprintService_GetScrumManagerForSprint_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScrumManagerForSprint" />
+  </wsdl:message>
+  <wsdl:message name="ISprintService_GetScrumManagerForSprint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScrumManagerForSprintResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISprintService_GetDevelopersForSprint_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevelopersForSprint" />
+  </wsdl:message>
+  <wsdl:message name="ISprintService_GetDevelopersForSprint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevelopersForSprintResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISprintService_GetSprintsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSprintsForUser" />
+  </wsdl:message>
+  <wsdl:message name="ISprintService_GetSprintsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSprintsForUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISprintService">
+    <wsdl:operation name="CreateSprint">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISprintService/CreateSprint" message="tns:ISprintService_CreateSprint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISprintService/CreateSprintResponse" message="tns:ISprintService_CreateSprint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSprintsForProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISprintService/GetSprintsForProject" message="tns:ISprintService_GetSprintsForProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISprintService/GetSprintsForProjectResponse" message="tns:ISprintService_GetSprintsForProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignDeveloperToSprint">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISprintService/AssignDeveloperToSprint" message="tns:ISprintService_AssignDeveloperToSprint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISprintService/AssignDeveloperToSprintResponse" message="tns:ISprintService_AssignDeveloperToSprint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScrumManagerForSprint">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISprintService/GetScrumManagerForSprint" message="tns:ISprintService_GetScrumManagerForSprint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISprintService/GetScrumManagerForSprintResponse" message="tns:ISprintService_GetScrumManagerForSprint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevelopersForSprint">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISprintService/GetDevelopersForSprint" message="tns:ISprintService_GetDevelopersForSprint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISprintService/GetDevelopersForSprintResponse" message="tns:ISprintService_GetDevelopersForSprint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSprintsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISprintService/GetSprintsForUser" message="tns:ISprintService_GetSprintsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISprintService/GetSprintsForUserResponse" message="tns:ISprintService_GetSprintsForUser_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISprintService" type="tns:ISprintService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateSprint">
+      <soap:operation soapAction="http://tempuri.org/ISprintService/CreateSprint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSprintsForProject">
+      <soap:operation soapAction="http://tempuri.org/ISprintService/GetSprintsForProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignDeveloperToSprint">
+      <soap:operation soapAction="http://tempuri.org/ISprintService/AssignDeveloperToSprint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScrumManagerForSprint">
+      <soap:operation soapAction="http://tempuri.org/ISprintService/GetScrumManagerForSprint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevelopersForSprint">
+      <soap:operation soapAction="http://tempuri.org/ISprintService/GetDevelopersForSprint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSprintsForUser">
+      <soap:operation soapAction="http://tempuri.org/ISprintService/GetSprintsForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SprintService">
+    <wsdl:port name="BasicHttpBinding_ISprintService" binding="tns:BasicHttpBinding_ISprintService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ScrumManagementApp.WebService.Services/SprintService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

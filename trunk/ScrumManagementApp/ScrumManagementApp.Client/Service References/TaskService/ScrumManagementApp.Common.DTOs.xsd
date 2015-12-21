@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ScrumManagementApp.Common.DTOs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ScrumManagementApp.Common.DTOs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="TaskDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeveloperOwnedById" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HoursRemaining" type="ser:duration" />
+      <xs:element minOccurs="0" name="TaskDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskId" type="xs:int" />
+      <xs:element minOccurs="0" name="TaskName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserStoryID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaskDTO" nillable="true" type="tns:TaskDTO" />
+</xs:schema>

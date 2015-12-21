@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="ScrumManagementApp.Client.Views.SprintSummaryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+
+    <StackPanel>
+        <StackPanel Margin="5" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Label Content="{Binding SprintName}" VerticalAlignment="Center" HorizontalContentAlignment="Center"
+                   HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Foreground="DodgerBlue"/>
+            <Label Content=" Summary" VerticalAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center"
+                   FontWeight="Bold" FontSize="20" Foreground="DodgerBlue" />
+        </StackPanel>
+
+
+        <StackPanel Margin="5" Orientation="Horizontal">
+            <Label Content="Name: " FontSize="16" FontWeight="Bold" Width="200"/>
+            <TextBlock Text="{Binding SprintName}" TextWrapping="NoWrap" VerticalAlignment="Center" FontSize="16"/>
+        </StackPanel>
+        <StackPanel Margin="5" Orientation="Horizontal">
+            <Label Content="Scrum Master: " FontSize="16" FontWeight="Bold" Width="200"/>
+            <TextBlock Text="{Binding SprintScrumMasterName}" TextWrapping="NoWrap" VerticalAlignment="Center" FontSize="16"/>
+        </StackPanel>
+        <StackPanel Margin="5" Orientation="Horizontal">
+            <Label Content="Developers: " FontSize="16" FontWeight="Bold" Width="200"/>
+            <TextBlock Text="{Binding SprintDevelopersNames}" TextWrapping="NoWrap" VerticalAlignment="Center" FontSize="16"/>
+        </StackPanel>
+        <StackPanel Margin="5" Orientation="Horizontal">
+            <Label Content="Start Date: " FontSize="16" FontWeight="Bold"  Width="200"/>
+            <Label Content="{Binding SprintStartDate}" FontSize="16"/>
+        </StackPanel>
+        <StackPanel Margin="5" Orientation="Horizontal">
+            <Label Content="End Date: " FontSize="16" FontWeight="Bold" Width="200"/>
+            <Label Content="{Binding SprintEndDate}" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label VerticalContentAlignment="Center" Content="Sprint Backlog: "
+                       FontSize="16" FontWeight="Bold" Foreground="DodgerBlue" Width="200"/>
+
+            <Button Style="{StaticResource AccentedSquareButtonStyle}" Margin="5" Content="Edit"
+                        Command="{Binding SprintBacklogButtonCommand}" FontWeight="Bold" VerticalAlignment="Center"
+                        FontSize="16" Visibility="{Binding ShowIfScrumMaster}" Width="75"/>
+            <Button Style="{StaticResource AccentedSquareButtonStyle}" Margin="5" Content="View"
+                	    Command="{Binding ShowSprintBacklogCommand}" FontWeight="Bold" VerticalAlignment="Center"
+                        FontSize="16" Width="75"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Button Style="{StaticResource AccentedSquareButtonStyle}" Margin="5" Content="Manage Sprint"
+                	    Command="{Binding ShowSprintManagementCommand}" FontWeight="Bold" VerticalAlignment="Center"
+                        FontSize="16" Width="129" Visibility="{Binding ShowIfScrumMaster}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Button Style="{StaticResource AccentedSquareButtonStyle}" Margin="5" Content="Add Tasks"
+                	    Command="{Binding AddTasksToSprint}" FontWeight="Bold" VerticalAlignment="Center"
+                        FontSize="16" Width="129" Visibility="{Binding ShowIfDeveloper}" />
+            <Button Style="{StaticResource AccentedSquareButtonStyle}" Margin="5" Content="View Tasks"
+                	    Command="{Binding ViewTasksCommand}" FontWeight="Bold" VerticalAlignment="Center"
+                        FontSize="16" Width="129" />
+        </StackPanel>
+        <Button Content="Back" Command="{Binding BackCommand}" Style="{StaticResource AccentedSquareButtonStyle}" Width="75" Margin="5"/>
+    </StackPanel>
+</UserControl>
