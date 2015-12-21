@@ -8,4 +8,4 @@ I predominantly worked server side and first introduced the layered architecture
 
 For specific code contributions, please see
 
-<list>
+ScrumManagementApplication/trunk/ScrumManagementApp/ScrumManagementApp.DAL/Repository/GenericRepository.cs
